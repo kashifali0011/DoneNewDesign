@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@null">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_bottom_more"
+            android:orientation="vertical">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvAddNewAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="start"
+                android:text="@string/add_a_new_address"
+                android:textColor="@color/non_fill_tab"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_medium.ttf" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ivLocation"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_marker_stroke" />
+
+                            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                                android:id="@+id/tvAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_toEndOf="@+id/ivLocation"
+                                android:gravity="start"
+                                android:singleLine="true"
+                                android:text="6954 Quitzon Track, Riyadh, Saudi Arab"
+                                android:textColor="@color/non_fill_tab"
+                                android:textSize="@dimen/_10ssp"
+                                app:customFont="poppins_light.ttf" />
+
+                        </RelativeLayout>
+
+                        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="start"
+                            android:text="@string/we_re_missing_your_street"
+                            android:textColor="@color/non_fill_tab"
+                            android:textSize="@dimen/_10ssp"
+                            app:customFont="poppins_medium.ttf" />
+
+                        <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                            android:id="@+id/etStreet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/btn_blue_corner"
+                            android:backgroundTint="@color/light_gray"
+                            android:gravity="start"
+                            android:hint="@string/street"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_7sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_7sdp"
+
+                            android:textColor="@color/non_fill_tab"
+                            android:textSize="@dimen/_10ssp"
+                            app:customFont="poppins_light.ttf" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                android:id="@+id/etFloor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/btn_blue_corner"
+                android:backgroundTint="@color/light_gray"
+                android:gravity="start"
+                android:hint="@string/floor_unit"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_7sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_7sdp"
+                android:textColor="@color/non_fill_tab"
+                android:textSize="@dimen/_10ssp"
+                app:customFont="poppins_light.ttf" />
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                android:id="@+id/etNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/btn_blue_corner"
+                android:backgroundTint="@color/light_gray"
+                android:gravity="start"
+                android:hint="@string/note_to_provider_optional"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_7sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_7sdp"
+                android:textColor="@color/non_fill_tab"
+                android:textSize="@dimen/_10ssp"
+                app:customFont="poppins_light.ttf" />
+
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="start"
+                android:text="@string/add_a_label"
+                android:textColor="@color/non_fill_tab"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_medium.ttf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/llHome"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlHome"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/ic_circle"
+                        android:backgroundTint="@color/white"
+                        android:elevation="@dimen/_5sdp">
+
+                        <ImageView
+                            android:id="@+id/ivHome"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_home" />
+                    </RelativeLayout>
+
+
+                    <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/home"
+                        android:textColor="@color/non_fill_tab"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/llWork"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlWork"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:background="@drawable/ic_circle"
+                        android:backgroundTint="@color/white"
+                        android:elevation="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_centerInParent="true"
+                            android:id="@+id/ivWork"
+                            android:src="@drawable/ic_work" />
+                    </RelativeLayout>
+
+                    <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/work"
+                        android:textColor="@color/non_fill_tab"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:id="@+id/llOther">
+
+                    <RelativeLayout
+                        android:id="@+id/rlAdd"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:background="@drawable/ic_circle"
+                        android:backgroundTint="@color/white"
+                        android:elevation="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_centerInParent="true"
+                            android:id="@+id/ivOther"
+                            android:src="@drawable/ic_add" />
+                    </RelativeLayout>
+
+                    <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvOther"
+                        android:singleLine="true"
+                        android:text="@string/other"
+                        android:textColor="@color/non_fill_tab"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                android:id="@+id/etOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/btn_blue_corner"
+                android:backgroundTint="@color/light_gray"
+                android:gravity="start"
+                android:visibility="gone"
+                android:hint="@string/e_g_my_second_home"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_7sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_7sdp"
+                android:textColor="@color/non_fill_tab"
+                android:textSize="@dimen/_10ssp"
+                app:customFont="poppins_light.ttf" />
+
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+                android:id="@+id/btnSaveAndContinue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@color/hint_color"
+                android:text="@string/save_and_continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                app:customFont="poppins_medium.ttf" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:src="@drawable/ic_cross_fill" />
+
+    </RelativeLayout>
+</layout>

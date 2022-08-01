@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true">
+      <androidx.appcompat.widget.LinearLayoutCompat
+          android:id="@+id/llOptions"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_50sdp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:orientation="horizontal">
+<!--          <androidx.appcompat.widget.AppCompatImageView-->
+<!--              android:id="@+id/ivDot"-->
+<!--              android:layout_width="@dimen/_10sdp"-->
+<!--              android:layout_height="@dimen/_10sdp"-->
+<!--              android:layout_marginStart="@dimen/_5sdp"-->
+<!--              android:layout_gravity="center"-->
+<!--              android:background="@drawable/ic_circle"-->
+<!--               />-->
+              <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                  android:id="@+id/tvOptions"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="@dimen/_5sdp"
+                  android:textSize="@dimen/_10ssp"
+                  android:textColor="@color/non_fill_tab"
+                  app:customFont="poppins_regular.ttf"/>
+      </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
+ </layout>

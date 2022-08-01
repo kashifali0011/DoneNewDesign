@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.dtech.done.doneapp.data.model.responsemodel.GetCustomerAddressesResponseModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:id="@+id/rlMain"
+        android:background='@{model.select ? @color/blue : @color/ash_white }'>
+
+        <LinearLayout
+            android:id="@+id/llEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_60sdp"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:id="@+id/ivEdit"
+                android:tint='@{model.select ? @color/white: @color/blue}'
+                android:src="@drawable/edit_icon"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:id="@+id/ivDelete"
+                android:tint='@{model.select ? @color/white: @color/red}'
+                android:src="@drawable/ic_delete"/>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/top_up_line_color" />
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/ic_circle"
+            android:layout_centerVertical="true"
+            android:id="@+id/rlLocation"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:backgroundTint="@color/white">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/ic_marker_stroke">
+
+            </ImageView>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:clickable="false"
+
+            android:layout_toLeftOf="@+id/llEdit"
+            android:layout_toRightOf="@+id/rlLocation"
+            android:orientation="vertical">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvAddressTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.addressName}"
+                android:textColor='@{model.select ? @color/white: @color/non_fill_tab}'
+                android:textSize="@dimen/_12ssp"
+                android:clickable="false"
+                android:enabled="false"
+                app:customFont="poppins_medium.ttf" />
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:clickable="false"
+                android:enabled="false"
+                android:text="@{model.addressTitle}"
+                android:textColor='@{model.select ? @color/white: @color/non_fill_tab}'
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

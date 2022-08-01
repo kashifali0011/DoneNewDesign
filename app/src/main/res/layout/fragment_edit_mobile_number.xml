@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+    <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+        android:id="@+id/tvMobileNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="@string/confirm_mobile_num"
+        android:textColor="@color/non_fill_tab"
+        android:textSize="@dimen/_12ssp"
+        app:customFont="poppins_regular.ttf"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvMobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMobileNum"
+        app:strokeColor="@color/hint_color"
+        app:strokeWidth="@dimen/_1sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivFlag"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/ic_country_flag" />
+
+            <ImageView
+                android:id="@+id/ivSelectCountry"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_toEndOf="@+id/ivFlag"
+                android:background="@drawable/ic_select_icon" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/ivSelectCountry"
+                android:background="@color/hint_color"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"/>
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/view"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/_966_999_999_999"
+                android:inputType="phone"
+                android:textColor="@color/non_fill_tab"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_semibold.ttf" />
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+        android:id="@+id/btnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/btn_rount_corner"
+        android:text="@string/verify"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        app:customFont="poppins_medium.ttf"
+        app:layout_constraintTop_toBottomOf="@+id/cvMobileNumber"
+        app:layout_constraintStart_toStartOf ="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

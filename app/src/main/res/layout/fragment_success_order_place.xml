@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_170sdp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:src="@drawable/ic_order_confirm_icon" />
+
+        </RelativeLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="1.1"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bg_confirm_order"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvOrderPlaceDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="center"
+                android:text="@string/your_order_has_been_placed_your_provider_will_soon_accept_your_order"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_regular.ttf"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvOrderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="center"
+                android:text="@string/order_id"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_regular.ttf"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderPlaceDetails"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvOrderNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="center"
+                android:text="@string/don123456789"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_semibold.ttf"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderId"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/llApplyCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/app_coupen_corner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderNo">
+
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/view_all_orders"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_semibold.ttf"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </LinearLayout>
+
+</layout>

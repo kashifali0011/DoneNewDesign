@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+    <RelativeLayout
+        android:id="@+id/rlProfileImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:background="@drawable/bg_profile_image_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clNotification"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/rlProfileImage"
+        app:layout_constraintBottom_toBottomOf="@+id/rlLanguage"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/blue_text_color">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivInfoLogo"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/information_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/ivInfoLogo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="@string/name_updated"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:customFont="poppins_medium.ttf"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/rlLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlProfileImage">
+        <ImageView
+            android:id="@+id/ivLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/ic_english_switch"
+           />
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+            android:id="@+id/btnUpdatePic"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/ic_update_pic"
+            android:text="@string/update_picture"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/_8ssp"
+            app:customFont="poppins_semibold.ttf"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <RelativeLayout
+        android:id="@+id/rlFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlLanguage"
+        app:layout_constraintBottom_toTopOf="@+id/cvFullName">
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/full_name"
+            android:textColor="@color/non_fill_tab"
+            android:textSize="@dimen/_12ssp"
+            app:customFont="poppins_regular.ttf" />
+
+        <ImageView
+            android:id="@+id/ivEditName"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/edit_icon" />
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvFullName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/white"
+       app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlFullName"
+        app:strokeColor="@color/hint_color"
+        app:strokeWidth="@dimen/_1sdp">
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@null"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:hint="John"
+            android:inputType="phone"
+            android:textColor="@color/non_fill_tab"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/_12ssp"
+            app:customFont="poppins_semibold.ttf" />
+    </com.google.android.material.card.MaterialCardView>
+    <RelativeLayout
+        android:id="@+id/rlEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvFullName">
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/email"
+            android:textColor="@color/non_fill_tab"
+            android:textSize="@dimen/_12ssp"
+            app:customFont="poppins_regular.ttf" />
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvNotVerify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/tvEmail"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="(not verified)"
+            android:textColor="@color/discount_price_color"
+            android:textSize="@dimen/_10ssp"
+            app:customFont="poppins_regular.ttf" />
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvVerified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/tvEmail"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="@dimen/_5sdp"
+            android:text="(verified)"
+            android:textColor="@color/complete_txt_color"
+            android:textSize="@dimen/_10ssp"
+            app:customFont="poppins_regular.ttf" />
+
+        <ImageView
+            android:id="@+id/ivEditEmail"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/edit_icon" />
+    </RelativeLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlEmail"
+        app:strokeColor="@color/hint_color"
+        app:strokeWidth="@dimen/_1sdp">
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@null"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:hint="johndoe@gmail.com"
+            android:inputType="phone"
+            android:textColor="@color/non_fill_tab"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/_12ssp"
+            app:customFont="poppins_semibold.ttf" />
+    </com.google.android.material.card.MaterialCardView>
+    <RelativeLayout
+        android:id="@+id/rlMobileNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvEmail">
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvMobileNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/mobile_num"
+            android:textColor="@color/non_fill_tab"
+            android:textSize="@dimen/_12ssp"
+            app:customFont="poppins_regular.ttf" />
+
+        <ImageView
+            android:id="@+id/ivEditMobileNum"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/edit_icon" />
+    </RelativeLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvMobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rlMobileNum"
+        app:strokeColor="@color/hint_color"
+        app:strokeWidth="@dimen/_1sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivFlag"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/ic_country_flag" />
+
+            <ImageView
+                android:id="@+id/ivSelectCountry"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_toEndOf="@+id/ivFlag"
+                android:background="@drawable/ic_select_icon" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/ivSelectCountry"
+                android:background="@color/hint_color"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"/>
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                android:id="@+id/etPhoneNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/view"
+                android:background="@null"
+                android:maxLength="9"
+                android:gravity="center_vertical"
+                android:hint="@string/_966_999_999_999"
+                android:inputType="phone"
+                android:textColor="@color/non_fill_tab"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_semibold.ttf" />
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <RelativeLayout
+        android:id="@+id/rlLoginPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvMobileNumber">
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvLoginPin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/login_pin"
+            android:textColor="@color/non_fill_tab"
+            android:textSize="@dimen/_12ssp"
+            app:customFont="poppins_regular.ttf"
+            />
+
+        <ImageView
+            android:id="@+id/ivEditLoginPin"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/edit_icon" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/llPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlLoginPin">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="0dp">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_et_disable"
+                android:gravity="center"
+                android:hint="*"
+                android:padding="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:textColor="@color/blue_text_color"
+                android:textSize="@dimen/_20ssp"
+                app:customFont="poppins_semibold.ttf" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="0dp">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_et_disable"
+                android:gravity="center"
+                android:hint="*"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/blue_text_color"
+                android:textSize="@dimen/_20ssp"
+                app:customFont="poppins_semibold.ttf" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="0dp">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/et3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_et_disable"
+                android:gravity="center"
+                android:hint="*"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/blue_text_color"
+                android:textSize="@dimen/_20ssp"
+                app:customFont="poppins_semibold.ttf" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="0dp">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/et4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_et_disable"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:hint="*"
+                android:textColor="@color/blue_text_color"
+                android:textSize="@dimen/_20ssp"
+                app:customFont="poppins_semibold.ttf" />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="String" />
+
+        <variable
+            name="isSepratorShown"
+            type="Boolean" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/rlMain">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/non_fill_tab"
+            android:text="@{model}"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/poppins_regular"
+            android:id="@+id/tvTitle"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="@color/gray"
+            android:layout_alignParentBottom="true"
+            app:visibleGone="@{isSepratorShown}"
+            android:id="@+id/vSeprator"/>
+    </RelativeLayout>
+</layout>

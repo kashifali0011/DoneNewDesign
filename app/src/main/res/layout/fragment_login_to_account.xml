@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="isProvider"
+            type="Boolean" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:background="@drawable/bg_round_light_blue_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDoneLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:id="@+id/continueTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:gravity="center"
+            android:text="@string/login_to"
+            android:textColor="@color/non_fill_tab"
+            android:textSize="@dimen/_16ssp"
+            app:customFont="poppins_semibold.ttf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivDoneLogo" />
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvEnter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:gravity="center"
+            android:text="@string/enter_four_digit"
+            android:textColor="@color/non_fill_tab"
+            android:textSize="@dimen/_14ssp"
+            app:customFont="poppins_regular.ttf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/continueTxt" />
+
+        <LinearLayout
+            android:id="@+id/llPin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="4.6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEnter">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                    android:id="@+id/et1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bg_et_bottom_line"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="@dimen/_18ssp"
+                    android:textColor="@color/blue_text_color"
+                    app:customFont="poppins_semibold.ttf" />
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                    android:id="@+id/et2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bg_et_bottom_line"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/blue_text_color"
+                    android:textSize="@dimen/_18ssp"
+                    app:customFont="poppins_semibold.ttf" />
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                    android:id="@+id/et3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/bg_et_bottom_line"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/blue_text_color"
+                    android:textSize="@dimen/_18ssp"
+                    app:customFont="poppins_semibold.ttf" />
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                    android:id="@+id/et4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:background="@drawable/bg_et_bottom_line"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/blue_text_color"
+                    android:textSize="@dimen/_18ssp"
+                    app:customFont="poppins_semibold.ttf" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/btn_rount_corner"
+            android:text="@string/login_btn_txt"
+            android:backgroundTint="@color/hint_color"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:customFont="poppins_medium.ttf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llPin" />
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_180sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="right"
+            android:text="@string/forget_pin_txt"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+            android:id="@+id/btnContinueAsGuest"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:background="@drawable/btn_blue_corner"
+            android:text="@string/continue_as_guest"
+            android:textAllCaps="false"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_14ssp"
+            app:visibleGone="@{!isProvider}"
+            app:customFont="poppins_medium.ttf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvForgot" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnContinueAsGuest">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvLoginWithDifferentAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/login_with_different"
+                android:textColor="@color/non_fill_tab"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_regular.ttf"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center"
+                app:visibleGone="@{!isProvider}"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginWithDifferentAccount">
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/do_not_have"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_regular.ttf" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_bold.ttf" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

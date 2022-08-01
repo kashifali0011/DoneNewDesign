@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+        android:id="@+id/tvFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="start"
+        android:text="@string/full_name"
+        android:textColor="@color/non_fill_tab"
+        android:textSize="@dimen/_12ssp"
+        app:customFont="poppins_regular.ttf"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cvFullName"/>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvFullName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFullName"
+        app:strokeColor="@color/hint_color"
+        app:strokeWidth="@dimen/_1sdp">
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@null"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:hint="John"
+            android:inputType="text"
+            android:textColor="@color/non_fill_tab"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/_12ssp"
+            app:customFont="poppins_medium.ttf" />
+    </com.google.android.material.card.MaterialCardView>
+    <com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/btn_rount_corner"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        app:customFont="poppins_medium.ttf"
+        app:layout_constraintTop_toBottomOf="@+id/cvFullName"
+        app:layout_constraintStart_toStartOf ="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+     />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

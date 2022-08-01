@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRootWithDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvDate"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Today"
+            android:textColor="@color/non_fill_tab"
+            android:textSize="@dimen/_14ssp"
+            app:customFont="poppins_semibold.ttf"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/llDate"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                        android:id="@+id/tvYourBalanceIs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27"
+                        android:layout_gravity="center"
+                        android:textColor="@color/wallet_spent_color"
+                        android:textSize="@dimen/_12ssp"
+                        app:customFont="poppins_semibold.ttf"
+
+                        />
+                    <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                        android:id="@+id/tvSpent"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/june"
+                        android:textColor="@color/my_card_color_details"
+                        android:textSize="@dimen/_10ssp"
+                        app:customFont="poppins_light.ttf"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/llServices"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/llDate"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@+id/tvYourBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                        android:id="@+id/tvServiceName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_cleaning"
+                        android:layout_gravity="start"
+                        android:textColor="@color/wallet_spent_color"
+                        android:textSize="@dimen/_12ssp"
+                        app:customFont="poppins_medium.ttf"
+
+                        />
+                    <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                        android:id="@+id/tvServiceDetails"
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cleaning_dusting"
+                        android:textColor="@color/my_card_color_details"
+                        android:textSize="@dimen/_10ssp"
+                        app:customFont="poppins_light.ttf"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+                </LinearLayout>
+
+
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/tvYourBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:text="@string/sar_1000"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_semibold.ttf"
+                    />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

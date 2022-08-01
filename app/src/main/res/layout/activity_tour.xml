@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:background="@drawable/bg_round_light_blue_top"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpTour"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+        <LinearLayout
+            android:id="@+id/llTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_110sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/tab1"
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:src="@drawable/ic_circle_fill_tab" />
+
+            <ImageView
+                android:id="@+id/tab2"
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:src="@drawable/ic_circle_non_fill" />
+
+            <ImageView
+                android:id="@+id/tab3"
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:src="@drawable/ic_circle_non_fill" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

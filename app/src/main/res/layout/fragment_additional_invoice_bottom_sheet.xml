@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@null">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_bottom_more"
+            android:orientation="vertical">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="center"
+                android:text="@string/additional_invoice"
+                android:textColor="@color/non_fill_tab"
+                android:textSize="@dimen/_14ssp"
+                app:customFont="poppins_semibold.ttf" />
+            <RelativeLayout
+                android:id="@+id/rlAdditionalAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp">
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvAdditionalAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:text="@string/additional_invoice"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_regular.ttf" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:text="SAR 300.0"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_semibold.ttf" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlVat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvVat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:text="@string/vat"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_regular.ttf" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="SAR 30"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_semibold.ttf" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlCouponDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvCoupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:text="@string/coupon_discount_10"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_regular.ttf" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="-SAR 135"
+                    android:textColor="@color/discount_price_color"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_semibold.ttf" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlWallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvWalletBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:text="@string/wallet_balance"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_regular.ttf" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="-SAR 200"
+                    android:textColor="@color/discount_price_color"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_semibold.ttf" />
+            </RelativeLayout>
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/view_color"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlWallet" />
+            <RelativeLayout
+                android:id="@+id/rlTotalAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp">
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvTotalAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:text="@string/total_amount"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_bold.ttf" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="SAR 701.0"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_semibold.ttf" />
+
+            </RelativeLayout>
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/view_color"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlTotalAmount" />
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvPaymentMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/payment_method"
+                android:textColor="@color/non_fill_tab"
+                android:textSize="@dimen/_14ssp"
+                app:customFont="poppins_semibold.ttf"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSelectPaymentType"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvPaymentMethod"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPaymentMethod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/llServicesOnDelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@drawable/bg_light_grey_corner"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/rbServicesOnDelivery"
+                            style="@style/radioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:button="@drawable/ic_services_radio_design"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:text="@string/service_on_delivery"
+                            android:textColor="@color/non_fill_tab"
+                            android:textSize="@dimen/_10ssp"
+                            app:customFont="poppins_regular.ttf" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/llServicesCredit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@drawable/bg_light_grey_corner"
+                        app:layout_constraintTop_toBottomOf="@+id/llServicesOnDelivery"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/rbServicesOnCredit"
+                            style="@style/radioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:button="@drawable/ic_services_radio_design"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:text="@string/credit_debit_card"
+                            android:textColor="@color/non_fill_tab"
+                            android:textSize="@dimen/_10ssp"
+                            app:customFont="poppins_regular.ttf" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:background="@drawable/png_credit_cards" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </RelativeLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+                android:id="@+id/btnPayNow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/btn_rount_corner"
+                android:text="@string/pay_now"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                app:customFont="poppins_medium.ttf" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:src="@drawable/ic_cross_fill" />
+
+    </RelativeLayout>
+</layout>

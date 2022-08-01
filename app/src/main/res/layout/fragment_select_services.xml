@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true">
+
+
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceRecyclerView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/rvSelectServicesSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:text="@string/select_your_category"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_13ssp"
+                    app:customFont="poppins_semibold.ttf"
+                    android:id="@+id/tvSelectCategory"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvSelectServicesSlider" />
+
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceRecyclerView
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/rvMainCategory"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSelectCategory" />
+
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:text="@string/select_your_category"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_13ssp"
+                    app:customFont="poppins_semibold.ttf"
+                    android:id="@+id/tvLooking"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvMainCategory" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceRecyclerView
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/rvSubCategory"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLooking" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

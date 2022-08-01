@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_50sdp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvRoot"
+            android:layout_width="@dimen/_86sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="@color/coupon_card_color"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="0dp">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvCouponName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/home"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8sdp"
+                app:customFont="poppins_semibold.ttf" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvRemoveCoupon"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardBackgroundColor="@color/blue"
+            android:layout_alignParentEnd="true"
+            app:cardElevation="@dimen/_1sdp"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp">
+           <ImageView
+               android:background="@drawable/ic_delete_coupon"
+               android:layout_gravity="center"
+               android:layout_width="@dimen/_16ssp"
+               android:layout_height="@dimen/_16ssp"/>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+
+
+</layout>

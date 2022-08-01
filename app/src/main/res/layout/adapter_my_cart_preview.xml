@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_5sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvLogo"
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="@dimen/_82sdp"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    app:cardBackgroundColor="@color/blue_text_color"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_5sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_my_services" />
+                </androidx.cardview.widget.CardView>
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cvLogo"
+                    android:id="@+id/tvHomeCleaningServices"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:text="@string/home_cleaning_services"
+                    android:textColor="@color/my_card_color"
+                    android:textSize="@dimen/_11ssp"
+                    app:customFont="poppins_medium.ttf"
+                    />
+
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    app:layout_constraintStart_toEndOf="@+id/cvLogo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHomeCleaningServices"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvServicesDetails"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="@string/small_villa_2_bedroom_3_baths_1_kitchen_1_drawing_room"
+                    android:textColor="@color/my_card_color_details"
+                    android:textSize="@dimen/_8ssp"
+                    app:customFont="poppins_medium.ttf"
+                    />
+
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/tvDiscountPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="@string/sar_1000"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:textColor="@color/discount_price_color"
+                    android:textSize="@dimen/_10ssp"
+                    app:customFont="poppins_regular.ttf"
+                    />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                   app:layout_constraintTop_toBottomOf="@+id/tvDiscountPrice"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/sar_1000"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:textColor="@color/prices_color"
+                    android:textSize="@dimen/_10ssp"
+                    app:customFont="poppins_bold.ttf"
+                    />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    app:layout_constraintTop_toBottomOf="@+id/tvServicesDetails"
+                    app:layout_constraintStart_toEndOf="@+id/cvLogo"
+                    android:id="@+id/tvServiceCleaners"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="@string/service_by_abc_cleaners"
+                    android:textColor="@color/blue_text_color"
+                    android:textSize="@dimen/_8ssp"
+                    app:customFont="poppins_regular.ttf"
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cvLogo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvServiceCleaners"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivTimer"
+                            android:layout_width="@dimen/_14sdp"
+                            android:layout_height="@dimen/_14sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:src="@drawable/ic_timer_icon" />
+
+                        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                            android:id="@+id/tvTimer"
+                            android:paddingTop="@dimen/_1sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_toEndOf="@+id/ivTimer"
+                            android:text="03:30 PM"
+                            android:textColor="@color/my_card_color_details"
+                            android:textSize="@dimen/_8ssp"
+                            app:customFont="poppins_regular.ttf" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                       android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_14sdp"
+                            android:layout_height="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:src="@drawable/ic_date_con" />
+                        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/tvDate"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/_1sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_height="match_parent"
+                            android:text="20th Sep 2022"
+                            android:textColor="@color/my_card_color_details"
+                            android:textSize="@dimen/_8ssp"
+                            app:customFont="poppins_regular.ttf"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+</layout>

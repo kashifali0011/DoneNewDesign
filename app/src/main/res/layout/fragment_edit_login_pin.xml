@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+    <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+        android:id="@+id/tvEnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_new_pin"
+        android:textColor="@color/non_fill_tab"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:customFont="poppins_regular.ttf"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf ="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/llPin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnter"
+        app:layout_constraintStart_toStartOf ="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4.6">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_weight="1"
+            app:cardElevation="0dp">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                android:id="@+id/etCreatePin1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/bg_et_pin"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="@dimen/_18ssp"
+                android:textColor="@color/blue_text_color"
+                app:customFont="poppins_semibold.ttf" />
+
+
+        </androidx.cardview.widget.CardView>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                android:id="@+id/etCreatePin2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/bg_et_disable"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="@dimen/_18ssp"
+                android:textColor="@color/blue_text_color"
+                app:customFont="poppins_semibold.ttf" />
+        </androidx.cardview.widget.CardView>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                android:id="@+id/etCreatePin3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/bg_et_disable"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="@dimen/_18ssp"
+                android:textColor="@color/blue_text_color"
+                app:customFont="poppins_semibold.ttf" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                android:id="@+id/etCreatePin4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/bg_et_disable"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="@dimen/_18ssp"
+                android:textColor="@color/blue_text_color"
+                app:customFont="poppins_semibold.ttf" />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+        android:id="@+id/tvConfirmPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm_new_pin"
+        android:textColor="@color/non_fill_tab"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:customFont="poppins_regular.ttf"
+        app:layout_constraintTop_toBottomOf="@+id/llPin1"
+        app:layout_constraintStart_toStartOf ="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <LinearLayout
+        android:id="@+id/llPin2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvConfirmPin"
+        app:layout_constraintStart_toStartOf ="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4.6">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_weight="1"
+            app:cardElevation="0dp">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                android:id="@+id/etConfirmPin1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/bg_et_disable"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="@dimen/_18ssp"
+                android:textColor="@color/blue_text_color"
+                app:customFont="poppins_semibold.ttf" />
+
+
+        </androidx.cardview.widget.CardView>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                android:id="@+id/etConfirmPin2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/bg_et_disable"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="@dimen/_18ssp"
+                android:textColor="@color/blue_text_color"
+                app:customFont="poppins_semibold.ttf" />
+        </androidx.cardview.widget.CardView>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                android:id="@+id/etConfirmPin3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/bg_et_disable"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="@dimen/_18ssp"
+                android:textColor="@color/blue_text_color"
+                app:customFont="poppins_semibold.ttf" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                android:id="@+id/etConfirmPin4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/bg_et_disable"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/blue_text_color"
+                app:customFont="poppins_semibold.ttf" />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+        android:id="@+id/btnUpdatePin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/btn_rount_corner"
+        android:text="@string/change_pin"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        app:customFont="poppins_medium.ttf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llPin2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

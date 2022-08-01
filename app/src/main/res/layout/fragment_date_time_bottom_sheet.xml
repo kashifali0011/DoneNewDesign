@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	
+	<data>
+		
+		<variable
+			name="isDateSelected"
+			type="Boolean" />
+		
+		<variable
+			name="isStartTimeSelected"
+			type="Boolean" />
+		
+	</data>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@android:color/transparent"
+		android:clickable="true"
+		android:focusable="true">
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+			android:layout_marginBottom="20dp"
+			android:gravity="center_horizontal"
+			android:background="@drawable/bg_bottom_more"
+			android:orientation="vertical">
+			
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal"
+				android:paddingLeft="@dimen/_10sdp"
+				android:paddingRight="@dimen/_10sdp"
+				android:orientation="vertical"
+				android:id="@+id/rlDate">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/blue"
+					android:layout_marginTop="20dp"
+					android:text="@string/select_date"
+					android:textSize="@dimen/_15ssp"/>
+				
+				<DatePicker
+					android:id="@+id/date_picker"
+					style="@style/MyDatePicker"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:calendarViewShown="false"
+					android:datePickerMode="calendar"
+					android:spinnersShown="true" />
+			</LinearLayout>
+			
+			
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/_50sdp"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:paddingLeft="@dimen/_10sdp"
+				android:paddingRight="@dimen/_10sdp"
+				android:id="@+id/rlSelectedMeetingDate"
+				app:visibleGone="@{isDateSelected}">
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:paddingLeft="@dimen/_10sdp"
+					android:paddingRight="@dimen/_10sdp"
+					android:background="@color/blue"/>
+
+				<TextView
+					android:id="@+id/tvSelectedDate"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:text="Wed, Jan 7 ,2021"
+					android:textColor="@color/white"
+					android:textSize="@dimen/_22ssp"
+					android:textStyle="bold" />
+			</RelativeLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal"
+				android:visibility="gone"
+				android:paddingLeft="@dimen/_10sdp"
+				android:paddingRight="@dimen/_10sdp"
+				android:orientation="vertical"
+				android:id="@+id/rlStartTime">
+				
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/blue"
+					android:text="Select Start Time"
+					android:layout_marginTop="@dimen/_10sdp"
+					android:textSize="@dimen/_15ssp"/>
+				
+				<TimePicker
+					android:id="@+id/timePicker"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:timePickerMode="clock" />
+			</LinearLayout>
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/_50sdp"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:paddingLeft="@dimen/_10sdp"
+				android:paddingRight="@dimen/_10sdp"
+				app:visibleGone="@{isStartTimeSelected}"
+				android:id="@+id/rlSelectedStartTime">
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:paddingLeft="@dimen/_10sdp"
+					android:paddingRight="@dimen/_10sdp"
+					android:background="@color/blue"/>
+
+				<TextView
+					android:id="@+id/tvSelectedStartTime"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:text="10:34 AM"
+					android:textColor="@color/white"
+					android:textSize="@dimen/_22ssp"
+					android:textStyle="bold" />
+			</RelativeLayout>
+			
+			
+			<com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+				android:id="@+id/btnSelect"
+				style="?android:attr/borderlessButtonStyle"
+				android:layout_width="@dimen/_165sdp"
+				android:layout_height="@dimen/_40sdp"
+				android:layout_below="@+id/date_picker"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:layout_marginBottom="@dimen/_20sdp"
+				android:background="@drawable/btn_rount_corner"
+				android:text="@string/done"
+				android:textAllCaps="false"
+				android:textColor="@color/white"
+				android:textSize="@dimen/_12ssp" />
+		
+		</LinearLayout>
+	
+	</RelativeLayout>
+</layout>

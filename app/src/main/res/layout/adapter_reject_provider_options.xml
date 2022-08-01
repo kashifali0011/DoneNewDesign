@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llServiceAtHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbServices"
+            style="@style/radioButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:button="@drawable/ic_services_radio_design"
+            android:paddingStart="@dimen/_5sdp"
+            android:text="I don’t want a provider now"
+            android:textColor="@color/non_fill_tab"
+            android:textSize="@dimen/_11ssp"
+            app:customFont="poppins_regular.ttf" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

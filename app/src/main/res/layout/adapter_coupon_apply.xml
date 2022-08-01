@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvCouponName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text="@string/coupon_discount_20"
+            android:textColor="@color/my_card_color_details"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:textSize="@dimen/_12ssp"
+            app:customFont="poppins_regular.ttf"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:id="@+id/tvCouponDiscount"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="@string/_100_00_sar"
+            android:textColor="@color/discount_price_color"
+            android:textSize="@dimen/_12ssp"
+            app:customFont="poppins_bold.ttf"
+            app:layout_constraintEnd_toEndOf="parent"
+             />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</layout>

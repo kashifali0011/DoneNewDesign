@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tour_three" />
+
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:text="@string/unmatched_quality_prices"
+                android:textColor="@color/dark_text_color"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_medium.ttf" />
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_40sdp"
+                android:gravity="center"
+                android:text="The DONE Guarantee - providing our customers the best quality service at the best price"
+                android:textColor="@color/light_text_color"
+                android:textSize="@dimen/_10ssp"
+                app:customFont="poppins_regular.ttf" />
+        </LinearLayout>
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+            android:id="@+id/btnGetStarted"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:background="@drawable/btn_rount_corner"
+            android:text="@string/get_started"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:customFont="poppins_medium.ttf" />
+    </RelativeLayout>
+</layout>

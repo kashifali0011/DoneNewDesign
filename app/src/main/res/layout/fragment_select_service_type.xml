@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:focusable="true">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvChoose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="start"
+                    android:text="@string/choose_service_type"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_semibold.ttf" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llSelectOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llServiceAtHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/rbServices"
+                            style="@style/radioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:button="@drawable/ic_services_radio_design"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:text="@string/service_at_home"
+                            android:textColor="@color/non_fill_tab"
+                            android:textSize="@dimen/_12ssp"
+                            app:customFont="poppins_regular.ttf" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llCollect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/rbCollect"
+                            style="@style/radioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:button="@drawable/ic_services_radio_design"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/collect_return"
+                            android:textColor="@color/non_fill_tab"
+                            android:textSize="@dimen/_12ssp"
+                            app:customFont="poppins_regular.ttf" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceRecyclerView
+                    android:id="@+id/rvQuestionAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvAddDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="start"
+                    android:text="@string/add_description"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_semibold.ttf" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvTellSomeThing"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="@dimen/_3sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/rlTellSomeThing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                            android:id="@+id/tvTellSomeThing"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/tell_some_thing"
+                            android:padding="@dimen/_10ssp"
+                            android:textColor="@color/non_fill_tab"
+                            android:textColorHint="@color/light_grey_txt"
+                            android:textSize="@dimen/_12ssp"
+                            app:customFont="poppins_regular.ttf" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvUploadImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="start"
+                    android:text="@string/image_upload"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_semibold.ttf" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvUploadImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="@dimen/_3sdp"
+                   >
+
+                    <LinearLayout
+                        android:id="@+id/llUploadImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:weightSum="2">
+
+                        <com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+                            android:id="@+id/btnImageUpload"
+                            android:layout_width="@dimen/_5sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_margin="@dimen/_15sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/upload_image" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+                            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                                android:id="@+id/tvMaxPic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="@string/upload_maximum"
+                                android:textColor="@color/light_grey_txt"
+                                android:textSize="@dimen/_10ssp"
+                                app:customFont="poppins_regular.ttf" />
+
+                            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="@string/upload_max_size"
+                                android:textColor="@color/light_grey_txt"
+                                android:textSize="@dimen/_8ssp"
+                                app:customFont="poppins_semibold.ttf" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceRecyclerView
+                    android:id="@+id/rvImageSelection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+            android:id="@+id/btnProceed"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/btn_rount_corner"
+            android:backgroundTint="@color/hint_color"
+            android:text="@string/proceed"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:customFont="poppins_medium.ttf" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.core.widget.NestedScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/clBottom">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true">
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvSelectedServices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/selected_services"
+                    android:textColor="@color/non_fill_tab"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_semibold.ttf"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imAddLogo"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_add_btn"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                        android:id="@+id/tvEnter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_toEndOf="@+id/imAddLogo"
+                        android:text="@string/add_new_service"
+                        android:textColor="@color/blue_text_color"
+                        android:textSize="@dimen/_8ssp"
+                        app:customFont="poppins_regular.ttf"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </RelativeLayout>
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceRecyclerView
+                    android:id="@+id/rvMyServices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSelectedServices" />
+
+
+                <View
+                    android:id="@+id/viewOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@color/my_card_line_color"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvMyServices" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvSubtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/subtotal"
+                    android:textColor="@color/my_card_color_details"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_regular.ttf"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewOne" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:text="@string/sar_1000"
+                    android:textColor="@color/my_card_color_details"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_bold.ttf"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewOne" />
+
+                <View
+                    android:id="@+id/viewTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@color/my_card_line_color"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSubtotal" />
+
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvVat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/vat_15"
+                    android:textColor="@color/my_card_color_details"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_regular.ttf"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewTwo" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:text="@string/_150_00_sar"
+                    android:textColor="@color/my_card_color_details"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_bold.ttf"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewTwo" />
+
+                <View
+                    android:id="@+id/viewThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@color/white"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvVat" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvWalletBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/wallet_balance"
+                    android:textColor="@color/my_card_color_details"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_regular.ttf"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewThree" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:text="@string/_100_00_sar"
+                    android:textColor="@color/my_wallet_balance_color"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_bold.ttf"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewThree" />
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceRecyclerView
+                    android:id="@+id/rvCouponApply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/tvWalletBalance" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imAPPCoupon"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:src="@drawable/ic_coupen_icon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvCouponApply" />
+
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvTextCoupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/apply_a_coupon"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_12ssp"
+                    app:customFont="poppins_semibold.ttf"
+                    app:layout_constraintStart_toEndOf="@+id/imAPPCoupon"
+                    app:layout_constraintTop_toBottomOf="@+id/rvCouponApply" />
+
+
+                <RelativeLayout
+                    android:id="@+id/llApplyCoupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_100sdp"
+                    android:background="@drawable/app_coupen_corner"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTextCoupon">
+
+
+                    <com.dtech.done.doneapp.utilities.helper.TypeFaceEditText
+                        android:id="@+id/edtAddCoupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_toStartOf="@+id/cvApplyCoupon"
+                        android:background="@null"
+                        android:textSize="@dimen/_14ssp"
+                        app:customFont="poppins_semibold.ttf" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvApplyCoupon"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/blue"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="@dimen/_1sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/apply"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp"
+                            app:customFont="poppins_medium.ttf"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvAddCoupon"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@color/blue"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="@dimen/_1sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Add"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp"
+                            app:customFont="poppins_medium.ttf"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+
+                <com.dtech.done.doneapp.utilities.helper.TypeFaceRecyclerView
+                    android:id="@+id/rvCoupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/llApplyCoupon" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:text="@string/total_amount"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_bold.ttf"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/_1050_00_sar"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_bold.ttf"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+                android:id="@+id/btnCheckOut"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/btn_rount_corner"
+                android:text="@string/review_payment_checkout"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                app:customFont="poppins_medium.ttf"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalAmount" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clNoDate"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/ic_empty_cart_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/tvNoServicesFound"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_100sdp"/>
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvNoServicesFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/no_services_found"
+                android:textAlignment="center"
+                android:textColor="@color/non_fill_tab"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_bold.ttf"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/cvLogo"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                app:cardBackgroundColor="@color/blue_text_color"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvNoServicesFound">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivAdd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/ic_add_services" />
+
+                        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                            android:id="@+id/tvAddService"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_toEndOf="@+id/ivAdd"
+                            android:text="@string/add_a_new_services"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp"
+                            app:customFont="poppins_medium.ttf" />
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+</layout>

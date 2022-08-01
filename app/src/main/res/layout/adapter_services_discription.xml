@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDescription"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:cardBackgroundColor="@color/blue"
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="@dimen/_8sdp"/>
+
+        <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+            android:layout_width="0dp"
+            android:textColor="@color/non_fill_tab"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:customFont="poppins_regular.ttf"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/using_original_confidential_tools_materials_specific_machines"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cvDescription"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

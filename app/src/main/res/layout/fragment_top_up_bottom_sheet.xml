@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@null">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_bottom_more"
+            android:orientation="vertical">
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/tvConfirmPaymentMethod"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="start"
+                android:text="@string/confirm_payment_method"
+                android:textColor="@color/non_fill_tab"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_semibold.ttf" />
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTopUpAmount"
+                app:layout_constraintTop_toBottomOf="@+id/tvConfirmPaymentMethod"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/top_up_amount"
+                android:textColor="@color/non_fill_tab"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_medium.ttf" />
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvTopUpTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvConfirmPaymentMethod"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/sar_1080_00"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_14ssp"
+                app:customFont="poppins_semibold.ttf" />
+
+            <View
+                android:id="@+id/viewBottomSheet"
+                android:background="@color/top_up_line_color"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvTopUpAmount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="1dp"/>
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/viewBottomSheet"
+                android:id="@+id/tvConfirmPayment"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="start"
+                android:text="@string/payment_methodes"
+                android:textColor="@color/non_fill_tab"
+                android:textSize="@dimen/_12ssp"
+                app:customFont="poppins_semibold.ttf" />
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPaymentInfo"
+                    android:background="@drawable/app_coupen_corner"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvConfirmPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+
+                    <com.dtech.done.doneapp.utilities.helper.TypeFaceTextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:text="@string/credit_debit_card"
+                        android:textColor="@color/my_card_color_details"
+                        android:textSize="@dimen/_10ssp"
+                        app:customFont="poppins_regular.ttf" />
+
+                    <ImageView
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@drawable/png_credit_cards"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+            <com.dtech.done.doneapp.utilities.helper.TypeFaceButton
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/btnSaveAndContinue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                app:layout_constraintTop_toBottomOf="@+id/clPaymentInfo"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/btn_rount_corner"
+                android:text="@string/continuees"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                app:customFont="poppins_medium.ttf" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:src="@drawable/ic_cross_fill" />
+
+    </RelativeLayout>
+</layout>

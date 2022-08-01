@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "1034035446293",
+    "firebase_url": "https://done-3d3fc.firebaseio.com",
+    "project_id": "done-3d3fc",
+    "storage_bucket": "done-3d3fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034035446293:android:7c5be1d6690d2cb0",
+        "android_client_info": {
+          "package_name": "com.dtech.Do_ne"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034035446293-tm6qsd8g5ga8thhgtq3jtpa44ivrjukh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnsaI3nY-BvF-JSD5qSk7Skj5Lc0xjO5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034035446293-tm6qsd8g5ga8thhgtq3jtpa44ivrjukh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1034035446293-bdjcutms55f4asd9sofg81ecrls4cfkv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Do-ne.Done"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034035446293:android:7c5be1d6690d2cb0",
+        "android_client_info": {
+          "package_name": "com.dtech.Do_ne.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034035446293-tm6qsd8g5ga8thhgtq3jtpa44ivrjukh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnsaI3nY-BvF-JSD5qSk7Skj5Lc0xjO5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034035446293-tm6qsd8g5ga8thhgtq3jtpa44ivrjukh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1034035446293-bdjcutms55f4asd9sofg81ecrls4cfkv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Do-ne.Done.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
